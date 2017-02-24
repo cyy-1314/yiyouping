@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/xiangqing_gouwuche.css"/>
+    <link rel="stylesheet" type="text/css" href="css/xiangqing_introduce.css"/>
+    <script type="text/javascript" src="js/JQuery-3.1.1.min.js"></script>
+	<script src="js/subModal.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+   <script>
+	/* 用途: 接收地直栏参数 取id=1 根据ID的值 */
+	urlinfo=window.location.href; //获取当前页面的url
+	len=urlinfo.length;//获取url的长度
+	offset=urlinfo.indexOf("?");//设置参数字符串开始的位置
+	newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串
+	newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割
+	newsid=newsids[1];//得到参数值
+	newsname=newsids[0];//得到参数名字
+	</script>
+</head>
+<body ng-app="zxApp" ng-controller="myController">
+<div ng-include="'header_title.html'"></div>
+<!--action="SmallGouwuche.html?cheapId={{bigInfo[0].cheapId}}&productName={{bigInfo[0].productName}}&productImg={{bigInfo[0].productImg}}"--> 
+    <form   id="myform">
+        <div class="w960px2">
+            <div class="pro1" style="border-bottom: solid 2px #f2f2f2; padding-bottom: 5px;">
+                <a href="/" class="linka5a5">首页</a>
+                >保护套>苹果iPhone6 手机壳 超薄透明4.7寸硬壳
+            </div>
+            <div class="pro1" style="margin-bottom: 20px;" >
+                <div class="pro1_1">
+                    <img ng-src="{{bigInfo[0].bigImg}}" alt="保护套苹果 iphone6 手机壳 超薄透明4.7寸硬壳" width="420" height="420"/>
+                </div>
+                <div class="pro1_1_right">
+                    <div class="pro1_2">
+                        <!--为什么每个都加双引号？？？-->
+                        <span style="color: #f00;"></span>
+                        {{bigInfo[0].productName}}
+                        <span style="color: #f00;">下单就送：20元购物券+小礼品一份</span>
+                    </div>
+                    <div class="pro1_4">
+                        编号：{{bigInfo[0].NO}}
+                    </div>
+                    <div class="pro1_5">
+                        <div class="pro1_5_1">
+                            原价：
+                            <span class="colord3 font14">
+									{{bigInfo[0].oriPrice}}
+								</span>
+                        </div>
+                        <div class="pro1_5_2">
+								<span class="cff4500">
+									优惠价：
+								</span>
+                            <span class="font24" style="font-size: 30px;">
+									<strong>{{bigInfo[0].currentPrice}}</strong>
+								</span>
+                        </div>
+                    </div>
+                    <div class="pro1_5">
+                        已售：1件&nbsp;&nbsp;&nbsp;(已有0条评价)
+                    </div>
+                    <div class="pro1_5">
+                        邮费：消费满49元全国包邮
+                    </div>
+                    <div id="ptop2_1">
+                        <div class="ptop2_t1">
+                            可选颜色：
+                        </div>
+                        <div class="caimg">
+                           <ul>
+                                <li ng-repeat="x in smallInfo">
+                               	    <div ng-click="find(x.page)">
+                                    		<img ng-src="{{x.smallImg}}" width="30" height="30" border="0" alt="灰色"/>
+                                     </div>
+                              </li>
+   							</ul>
+                        </div>
+                        <div class="ptop2_t1">
+                            <div class="ptop2_t1a">已选颜色：</div>
+                            <div class="c005eb9">{{bigInfo[0].color}}</div>
+                        </div>
+                        <div class="ptop2_t1">
+                       <div class="ptop2_t1a">购买数量：</div>
+                    <input type="button" name="lesss" id="lesss" value="-"  style="width: 20px;" onclick="jian()"/>
+					<input type="text" name="text1" id="text1" value="1" style="width: 40px;"/>
+					<input type="button" name="add" id="add" value="+"  style="width: 20px;" onclick="jia()"/>
+                        </div>
+                        <div class="ptop2_t1buy">
+                           <a ng-href="orderInfo.php?&cheapId={{newsid}}&num={{nn}}" class="hrefa">
+                              <img src="xiangqingImg/lbuy.gif" alt="立即购买"/>
+                            </a>
+                        </div>
+                       
+                        <div class="ptop2_t1buy">
+                          <a ng-href="car.html?cheapId={{newsid}}&num={{nn}}" class="hrefa">
+                          <img src="xiangqingImg/buy_addcar2.gif" alt="加入购物车" width="181" height="45" border="0"/>
+                            </a>
+                        </div>
+                        <div class="ptop2_t1buy" style="margin-top: 18px;">
+                            <a href="#">
+                                <img src="xiangqingImg/sc.gif" width="85" height="30"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pro1">
+                <div class="proleft_all">
+                    <div class="proleft">
+                        <div class="proleft_1">同类商品排行榜</div>
+                        <div class="proleft_2">
+                            <div class="proleft_2_1">
+                                <a href="#" target="_blank">
+                                    <img src="xiangqingImg/20121122214100.jpg" width="75" height="75" border="0" alt="iphone4s皮套苹果4手机壳真皮质感手机套卡来登英伦左右开翻盖保护套皮夹保护外壳棕色"/>
+                                </a>
+                            </div>
+                            <div class="proleft_2_2">
+                                <a href="#" target="_blank">iphone4s皮套苹果4手机壳真皮质感</a>
+                                <p></p>
+                            </div>
+                            <div class="proleft_2_3">
+                                <strong class="cff4500 font14">￥45</strong>
+                            </div>
+                            <div class="proleft_2_3">619已购买</div>
+                        </div>
+                    </div>
+
+                    <div class="proleft">
+                        <div class="proleft_1">同类商品排行榜</div>
+                        <div class="proleft_2">
+                            <div class="proleft_2_1">
+                                <a href="#" target="_blank">
+                                    <img src="xiangqingImg/20121122214100.jpg" width="75" height="75" border="0" alt="iphone4s皮套苹果4手机壳真皮质感手机套卡来登英伦左右开翻盖保护套皮夹保护外壳棕色"/>
+                                </a>
+                            </div>
+                            <div class="proleft_2_2">
+                                <a href="#" target="_blank">iphone4s皮套苹果4手机壳真皮质感</a>
+                                <p></p>
+                            </div>
+                            <div class="proleft_2_3">
+                                <strong class="cff4500 font14">￥45</strong>
+                            </div>
+                            <div class="proleft_2_3">619已购买</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div id="showcos">
+                    <span style="color: red;">正在从服务器提取数据.....</span>
+                </div>-->
+                <div class="proright">
+                    <div class="nTab">
+                        <div class="TabTitle">
+                            <ul id="Tab0">
+                                <li class="active" onclick="nTabs(this,0)">商品介绍</li>
+                                <li  onclick="nTabs(this,1)">商品评论(0条) </li>
+                                <li  onclick="nTabs(this,2)">如何购买/支付</li>
+                                <li  onclick="nTabs(this,3)">售后服务</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="TabContent">
+                        <div id="Tab0_Content0">
+                            <div class="proabout">
+                                <div class="pa_con_l">
+                                    <div class="pa_con_ck">
+                                        <b>适合手机：{{bigInfo[0].fitPhone}}</b>
+                                    </div>
+                                    <div class="pa_con_ck">
+                                        <b>类型:{{bigInfo[0].type}}</b>
+                                    </div>
+                                    <div class="pa_con_ck">
+                                        <b>材质：{{bigInfo[0].material}}</b>
+                                    </div>
+                                    <div class="pa_con_ck">
+                                        <b>价格区间：{{bigInfo[0].priceFiled}}</b>
+                                    </div>
+                                    <div class="pa_con_ck">
+                                        <b>品牌：{{bigInfo[0].brand}}</b>
+                                    </div>
+                                    <div class="pa_con_ck">
+                                        <b>原产地：{{bigInfo[0].productPlace}}</b>
+
+                                    </div>
+                                    <div class="pa_con_ck1">
+                                        <b>适用机型：{{bigInfo[0].fitPhone}}</b>
+                                    </div>
+                                    <div class="pa_con_ck1">
+                                        <b>标签：</b>
+                                        "手机配件，苹果，保护套"
+                                    </div>
+                                </div>
+                                <div class="proabout2">
+                                    <img src="xiangqingImg/TB2M660aFXXXXajXpXXXXXXXXXX_!!394950540.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Tab0_Content1"  class="none">
+                            <!--第二部分为空，没有内容-->
+                        </div>
+                        <div id="Tab0_Content2"  class="none">
+                            <div class="promessage">
+                                <b><font style="FONT-SIZE: 14pt">第1步：浏览挑选商品</font></b>
+                                <p>请选择您要购买商品，确定商品的颜色款式及购买数量，然后单击购物车。</p>
+                                <p><img border="0" src="xiangqingImg/20120820110329396.jpg"></p>
+                                <p>&nbsp;</p>
+                                <b><font style="FONT-SIZE: 14pt">第2步：确认购物车</font></b>
+                                <p>购物车页面，修改购买商品的数量，或删除不需要的商品；继续购买商品。</p>
+                                <p><img border="0" src="xiangqingImg/20120820110711331.jpg"></p>
+                                <b><font style="FONT-SIZE: 14pt">第3步：结算中心</font></b>
+                                <p>在购物车页面确认购买信息无误后，点击"立即结算"按钮。此时如果您如尚未登录，则进入注册登录页面，如已登录，则进入填写订单信息页面。</p>
+                                <p>&nbsp;</p>
+                                <b><font style="FONT-SIZE: 14pt">第4步：填写收件人信息</font></b>
+                                <p>请您填写真实的收货人姓名、所在地区、详细的收货地址、邮编和联系电话。以方便我们准确的为您送达您所订购的商品。</p>
+                                <p>&nbsp;</p>
+                                <b><font style="FONT-SIZE: 14pt">第5步：选择配送方式</font></b>
+                                <p>根据您所在的地区填写送货方式，我们目前对全国大部分城市提供快递送货上门服务，首选中通快递、申通快递；如果前述2个快递都不在送货上门的范围，您可以选择邮政EMS，一优品不支持平邮。</p>
+                                <p>&nbsp;</p>
+                                <b><font style="FONT-SIZE: 14pt">第6步：选择支付方式及使用优惠券</font></b>
+                                <p>我们为您提供在支付宝支付，货到付款，等多种支付方式。</p>
+                                <p>&nbsp;</p>
+                                <p><img border="0" src="xiangqingImg/20120820111317666.jpg"></p>
+                                <p><font style="COLOR: #ee113d"></font>&nbsp;</p>
+                                <p><font style="COLOR: #ee113d">注：订单金额满99元才可以使用"货到付款"。</font></p>
+                                <p><font color="#ee113d"></font>&nbsp;</p>
+                                <p><b><font style="FONT-SIZE: 14pt">使用优惠券</font></b>&nbsp;<br>你有一优品优惠券或者从其他渠道货到优惠券，可以点击激活你的优惠券，然后使用。</p>
+                                <p>&nbsp;</p>
+                                <p><img border="0" src="xiangqingImg/20120820111659642.jpg"></p>
+                                <span class="step7"></span>
+                                <b><font style="FONT-SIZE: 14pt">第7步：订单完成确认</font></b>
+                                <p>写完以上信息之后，请仔细核对，检查确认商品数量、颜色、送货方式及收货地址是否正确。检查无误后点击"提交订单" ，系统会自动生成一个订单号。</p>
+                                <p>&nbsp;</p>
+                                <p><strong><font style="FONT-SIZE: 14pt">第八步;支付</font></strong></p>
+                                <p>我们提供支付宝支付，或货到付款（货到付款购物满99元可使用）。</p>
+                                <p><img border="0" src="xiangqingImg/20120820112139812.jpg"></p>
+                                <p><font style="COLOR: #ff0000; FONT-SIZE: 10.5pt"><strong>点击 "支付宝付款"跳转到支付宝支付页面支付，完成支付。</strong></font></p>
+                                <p><font style="FONT-SIZE: 10.5pt"></font>&nbsp;</p>
+                                <p><strong><font style="FONT-SIZE: 14pt">第九步，支付完，接下来就等我们一优品为您发货！</font></strong></p>
+                                <p><strong></strong>&nbsp;</p>
+                                <span style="FONT-SIZE: 14pt; FONT-WEIGHT: bold">第十步：验收商品</span><br>&nbsp;&nbsp;当您收到货物后，请仔细核对您所订购的商品种类、数量、规格以及相应的赠品，合格后，请在送货单上签字。如果您对我们的服务和商品不满意，请勿拆开、损坏商品及外包装，并欢迎您拨打我们的投拆电话，提出您的意见和建议，帮助我们提高服务质量。<br><br><br>
+                            </div>
+                        </div>
+                        <div id="Tab0_Content3"  class="none">
+                            <div class="promessage">
+                                <p><br><strong><font class="cff4500" style="FONT-SIZE: 14pt">客服热线：400-0099-230</font></strong> 服务时间：周一至周日8：00-23：30<br><br></p>
+                                <div style="background-color: #F8F8F8; font-size:14px; font-weight:bold; padding:5px;margin-bottom:15px;">7天无理由退换货服务</div>
+                                <p><strong>1、退换货承诺：<br></strong>&nbsp;&nbsp;&nbsp;一优品退换货服务三大优势：<br>&nbsp;&nbsp;&nbsp;1）自您签收商品之日起7日内，一优品无理由为您提供退换货服务。<br>&nbsp;&nbsp;&nbsp;2）退货、换货时质检商品承诺在1个工作日内完成，做到最快速质检服务。<br>&nbsp;&nbsp;&nbsp;3）退款工作承诺3个工作日内执行完成，做到购物退货退款无顾虑。</p>
+                                <p><strong></strong>&nbsp;</p>
+                                <p><strong>2、一优品按以下标准为您提供免费退换货服务：<br></strong>&nbsp;&nbsp;&nbsp;&nbsp;1）一优品对外承诺7天无理由退换货服务（从签收日起7天内）；<br>&nbsp;&nbsp;&nbsp;&nbsp;2）商品型号不对可退、换；<br>&nbsp;&nbsp;&nbsp;&nbsp;3）商品款式、颜色等不满意可退、换；<br>&nbsp;&nbsp;&nbsp;&nbsp;4）商品配送错误可退、换；<br>&nbsp;&nbsp;&nbsp;&nbsp;5）7天后，一优品将按照各品牌规定，为您提供售后三包服务；<br>&nbsp;&nbsp;&nbsp; 注：图片及信息仅供参考。因拍摄灯光及不同显示器色差等问题可能造成商品图片与实物有一定色差，不属于质量问题，请以实物为准</p>
+                                <p><strong></strong>&nbsp;</p>
+                                <p><strong>3、以下情况将不提供退换货服务：<br></strong>&nbsp;&nbsp;&nbsp;&nbsp;1）任何非一优品出售的产品或超过三包期限产品；<br>&nbsp;&nbsp;&nbsp;&nbsp;2）超过一优品承诺的7天退换货有效时间（产品属质量问题除外）；<br>&nbsp;&nbsp;&nbsp;&nbsp;3）商品相关附件、购物清单、吊牌、发票（若开具过发货）、赠品等不完整，商品的外包装损坏(包括包裹填充物及外包装盒)；<br>&nbsp;&nbsp;&nbsp;&nbsp;4）无质量问题并已使用过的商品、商品受污损，影响二次销售(商品掉漆、划痕、商品磨损、已有使用过痕迹、包装外壳有损坏的属于影响二次销售)，注意：包装外壳在快递过程中，有损坏的在退换货前请联系客服拍照记录，以便办理退换货；<br>&nbsp;&nbsp;&nbsp;&nbsp;5）因非正常使用、保养（贮存）不当、自行维修失误等发生问题的商品；</p>
+                                <p><strong></strong>&nbsp;</p>
+                                <p><strong>4、退换货注意事项或相关运费须知：<br></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1）如果该产品有附加的赠品，请将赠品一同退回，赠品需要保持收到赠品时的原样，如赠品不能退回，按照网上原售价格在退款中扣除；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2）符合一优品承诺退换货标准的商品，一优品推广期间所有来回运费均由一优品承担(请顾客先行垫付，一优品收到商品后经过检查，情况属实会以优惠券的方式返还运费)；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3）不接受平邮、到付和货运的方式寄回商品（敬请使用快递方式寄回。除质量问题外一优品不承担任何退换货邮费）；<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4）积分、红包等非现金的馈赠款项，在退换货时不做退款处理。 <br><br><strong>5、退换货礼品须知：</strong></p>
+                                <p>&nbsp;&nbsp;&nbsp; 订单如有发礼品的，退换货时请一同和包装一同退回，如无法退回，一优品会按一优品正常销售价扣取相关费用。</p><br>
+
+                                <div style="background-color: #F8F8F8; font-size:14px; font-weight:bold; padding:5px; margin-bottom:15px;">退款服务</div>
+                                <p><strong>1、如何申请退款： <br></strong>&nbsp;&nbsp; 1）未签收货物前：请联系客服人员进行处理。<br>&nbsp;&nbsp; 2）签收货物后：如需要退货退款，务必先联系客服人员，经过在线初步确认后，按规定寄回产品及相关配件等资料，<br>&nbsp; 并在订单纸中注明相关信息，由工作人员帮您办理退货及退款。 </p>
+                                <p>&nbsp;</p>
+                                <p><strong>2、退款规则： <br></strong>&nbsp;&nbsp; 1）若办理退货，退款会优先使用您原订单的支付方式进行退回。<br>&nbsp;&nbsp; 2）如果所支付的订单中含有非现金部分(如优惠券、积分等)，在退款时，非现金部分不能折现。 </p>
+                                <p>&nbsp;</p>
+                                <p><strong>3、退款方式及时间：<br></strong>&nbsp;&nbsp; 一优品会尽快为您的退款做服务，原则在三个工作日内完完成退款，退款原则上是以你支付的平台为收款点，如用支付宝就以支付宝为收退款，银行划款也一样，付到付款的原则上在支付宝为收退款。</p>
+                            </div>
+                        </div>
+                        <div class="pro_pinglun">
+                            <div class="nTab">
+                                <div class="TabTitle">
+                                    <ul id="Tab1">
+                                        <li class="active" onclick="nTabs(this,0)">用户评价</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ps_pj1">
+                                <div class="ps_pj_1">
+                                    "好评率:"
+                                    <span class="ptop2t1j">
+					    			0%
+					    		</span>
+                                </div>
+                                <div class="ps_pj_2">
+                                    <div class="ptop3_1">
+                                        "已售："
+                                        <span style="color: #f30;">0件</span>
+                                        &nbsp;"评论："
+                                        <span style="color: #f30;">0次</span>
+                                        &nbsp;
+                                    </div>
+                                    <div class="ptop3_1">
+                                        <div class="ptop3_1a" style="width: 44px;">
+                                            超赞：
+                                        </div>
+                                        <div class="ptop3_1b">
+                                            <div class="progress-container">
+                                                <div style="width: 0%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ptop3_1a">
+                                            0%
+                                        </div>
+                                    </div>
+                                    <div class="ptop3_1">
+                                        <div class="ptop3_1a" style="width: 44px;">
+                                            还好：
+                                        </div>
+                                        <div class="ptop3_1b">
+                                            <div class="progress-container">
+                                                <div style="width: 0%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ptop3_1a">
+                                            0%
+                                        </div>
+                                    </div>
+                                    <div class="ptop3_1">
+                                        <div class="ptop3_1a" style="width: 44px;">
+                                            普通：
+                                        </div>
+                                        <div class="ptop3_1b">
+                                            <div class="progress-container">
+                                                <div style="width: 0%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ptop3_1a">
+                                            0%
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--第三个框-->
+                                <div class="ps_pj_3">
+                                    <div class="pa_pj_3_1">
+                                        买过这个商品对它的印象
+                                    </div>
+                                    <div class="pa_pj_3_2">
+                                        <div id="yinxiang2">
+                                            还没有数据
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--第四部分-->
+                                <div class="ps_pj_4">
+                                    <div class="ps_pj_4_btn">
+                                        <a href="#" class="linkffff">我要评论</a>
+                                    </div>
+                                    <div class="ps_pj_4_1">评论只提供购买过此商品的用户</div>
+                                </div>
+                                <!--最后一部分-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		
+</div>
+    </form>
+    <div ng-include="'footer.html'"></div>
+</body>
+
+<script type="text/javascript">
+    function nTabs(thisObj,Num){
+        var tabObj=thisObj.parentNode.id;
+        var tabList=document.getElementById(tabObj).getElementsByTagName("li");
+        for (var i=0;i<tabList.length;i++) {
+            if (i==Num){
+                thisObj.className='active';
+                document.getElementById(tabObj+"_Content"+i).style.display="block";
+            }else{
+                tabList[i].className='normal';
+                document.getElementById(tabObj+"_Content"+i).style.display="none";
+            }
+        }
+    }
+
+</script>
+
+<script>
+		var numshu=1;
+		var shu=1;
+		var ling="";
+		var textnum=document.getElementById("text1");
+		var hrefBuy=document.getElementsByClassName("hrefa")[0];
+		var hrefa=document.getElementsByClassName("hrefa")[1];
+	    function jia(){
+			textnum.value++;
+			numshu=textnum.value;
+//			对加入购物车按钮中a标签的拼接
+			var numshuarr = hrefa.href.split('num=');
+//			shu=numshuarr[1];
+			ling=numshuarr[0];
+			numshuarr[1]=numshu;
+			var hrefStr = numshuarr.join("num=");
+			hrefa.href=hrefStr;
+			
+//			对立即购买按钮中a标签的拼接
+			var BuyArr= hrefBuy.href.split('num=');
+//			shuBuy=BuyArr[1];
+			ling=BuyArr[0];
+			BuyArr[1]=numshu;
+			var hrefStrBuy = BuyArr.join("num=");
+			hrefBuy.href=hrefStrBuy;
+		}
+		
+		function jian(){
+			textnum.value--;
+			if(text1.value <= 0) {
+			  text1.value = 1;
+			}
+			numshu=textnum.value;
+			var numshuarr = hrefa.href.split('num=');
+			shu=numshuarr[1];
+			ling=numshuarr[0];
+			numshuarr[1]=numshu;
+			console.log(numshuarr);
+			var hrefStr = numshuarr.join("num=");
+			hrefa.href=hrefStr;
+		}
+		
+			var app=angular.module("zxApp",[]);
+		    app.controller("myController",function ($scope,$http){
+				$scope.nn = shu;
+				$scope.newsid=newsid;
+				$.ajax({
+						type:"get",
+						url:"php/xiangqing_sql.php",
+						dataType:"json",
+						data:{
+							cheapId:newsid
+						},
+						success:function(data){
+							console.log(data)
+							   $scope.bigInfo=data[0];
+								$scope.smallInfo=data[1];
+								},
+						error:function(errors){
+								console.log("失败")
+								},
+						async:true
+					});
+			
+				$scope.find=function(page){
+					 $.ajax({
+						type:"get",
+						url:"php/selectImg.php",
+						dataType:"json",
+						data:{
+							page:page,
+						},
+						success:function(data){
+							console.log(data);
+							$scope.bigInfo=data[0];
+							console.log($scope.bigInfo[0]);
+							},
+						error:function(errors){
+								console.log("失败")
+								},
+						async:true
+					});
+		       }
+			})
+		
+		
+		</script>
+
+</html>

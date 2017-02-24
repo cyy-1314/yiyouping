@@ -1,0 +1,85 @@
+
+			.focusBox {
+					background-color: red;
+				width: 980px;
+				/*height: 500px;*/
+				position: absolute;
+				top: 0px;
+				left: 220px;
+			  
+				height: 357px; 
+				overflow: hidden;
+			}
+			
+			.focusBox .pic img {
+				width: 980px;
+				/*height: 357px;*/
+				display: block;
+			}
+			
+			.focusBox .hd {
+				overflow: hidden;
+				zoom: 1;
+				position: absolute;
+				bottom: 5px;
+				right: 10px;
+				z-index: 3
+			}
+			
+			.focusBox .hd li {
+				float: left;
+				line-height: 15px;
+				text-align: center;
+				font-size: 12px;
+				width: 25px;
+				height: 10px;
+				cursor: pointer;
+				overflow: hidden;
+				background: #919191;
+				margin-left: 4px;
+				filter: alpha(opacity=80);
+				opacity: .8;
+				-webkit-transition: All .5s ease;
+				-moz-transition: All .5s ease;
+				-o-transition: All .5s ease
+			}
+			
+			.focusBox .hd .on {
+				background: #fff;
+				filter: alpha(opacity=100);
+				opacity: 1;
+			}
+			
+			.focusBox .prev,
+			.focusBox .next {
+				width: 45px;
+				height: 99px;
+				position: absolute;
+				top: 91px;
+				z-index: 3;
+				filter: alpha(opacity=20);
+				-moz-opacity: .2;
+				opacity: .2;
+				-webkit-transition: All .5s ease;
+				-moz-transition: All .5s ease;
+				-o-transition: All .5s ease
+			}
+			
+			.focusBox .prev {
+	 
+				background-position: -112px 0;
+				left: 0
+			}
+			
+			.focusBox .next {
+		 
+				background-position: -158px 0;
+				right: 0
+			}
+			
+			.focusBox .prev:hover,
+			.focusBox .next:hover {
+				filter: alpha(opacity=60);
+				-moz-opacity: .6;
+				opacity: .6
+			}

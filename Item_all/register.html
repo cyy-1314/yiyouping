@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>register</title>
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+	</head>
+
+	<body>
+		<div class="registerBox">
+			<div class="register1">
+				<div class="register1_1">
+					<a href="#">
+						<img class="logo" src="img/logo.jpg" />
+					</a>
+				</div>
+				<div class="register1_2">
+					<a href="index.html">网站首页</a> |
+					<a href="#">帮助中心</a>
+				</div>
+			</div>
+			<div class="register2">
+				<div class="register2_1">
+					<form action="php/register_server.php" method="post" class="regfrom">
+						<div class="input1">
+							E-Mail: <input type="text" name="email" id="email" class="ipt1" value="" onfocus='this.className="ipt1"' onblur='this.className="ipt2",check1(this)'>
+							<p id="emails"></p>
+						</div>
+						<div class="input2">
+							密码: <input type="password" name="pwd" id="pwd" class="ipt1" onfocus='this.className="ipt1"' onblur='this.className="ipt2",check2(this)'>
+							<p id="pwds"></p>
+						</div>
+						<div class="input3">
+							确认密码: <input type="password" name="repwd" id="repwd" class="ipt1" onfocus='this.className="ipt1"' onblur='this.className="ipt2",check3(this)'>
+							<p id="repwds"></p>
+						</div>
+						<div class="register2_1_2">
+							<input type="submit" class="nlog_submit" value=" " title="立即注册" onmousemove='this.className="nlog_submit1"' onmouseout='this.className="nlog_submit"'>
+							<div>温馨提示：<br> 一淘网进入过本站购物请用支付宝登录
+							</div>
+						</div>
+					</form>
+
+					<div class="register2_1_3">
+						<input type="checkbox" name="checkbox" id="checkbox" checked="checked" />
+						<span>我同意用户协议《</span>
+						<a href="#">用户协议</a>
+						<span>》</span>
+					</div>
+					<div class="register2_1_4">使用合作网站账号登录：</div>
+					<div class="register2_1_5">
+						<a class="nreg_zpay" href="http://eyoupin.com/alilogin/alipay_auth_authorize.asp">支付宝</a> |
+						<a class="nreg_sina" href="#">新浪微博</a> |
+						<a class="nreg_qq" href="#">QQ</a>
+					</div>
+				</div>
+				<div class="register2_2">
+					<div class="register2_2_1">已有账号，请直接登录</div>
+					<div class="register2_2_2">
+						<a href="php/login.php" class="nlog_reg " title="登录网站" onmousemove='this.className="nlog_reg1"' onmouseout='this.className="nlog_reg"'></a>
+					</div>
+					<div class="register2_2_3">使用合作网站账号登录：</div>
+					<div class="register2_2_4">
+						<a class="nreg_zpay" href="http://eyoupin.com/alilogin/alipay_auth_authorize.asp">支付宝</a> |
+						<a class="nreg_sina" href="#">新浪微博</a> |
+						<a class="nreg_qq" href="#">QQ</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="register3">
+				<!--版权信息-->
+				<div>
+					<span>Copyright 2012</span>
+					<a href="#">一优品</a>
+					<span> All Rights Reserved </span>
+				</div>
+			</div>
+
+			<div style="clear: both"></div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/JQuery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		function check1(obj) {
+			console.log(obj.value);
+			$.ajax({
+					type: "post",
+					url: "php/ajax_register.php",
+					data: {
+						email: obj.value
+					},
+					//			dataType:"json",
+					success: function(data) {
+						//用于从一个字符串中解析出json对象
+						var obj = JSON.parse(data);
+						console.log("成功");
+						console.log(data);
+						console.log(obj);
+						if(obj.errcode == 1) {
+							$("#emails").css("color","#F50000");
+						} else if(obj.errcode == 0) {
+							$("#emails").css("color","#2E9800");
+						}
+						$("#emails").html(obj.msg);
+					},
+					erorr: function(errors) {
+						console.log("失败");
+					}
+				});			
+			}
+
+		function check2() {
+			if($("#pwd").val() == "") {
+				$("#pwds").html("密码不能为空！");
+			}else{
+				$("#pwds").html("密码输入正确！");
+			}
+		}
+
+		function check3() {
+			if($("#repwd").val() == "") {
+				$("#repwds").html("密码不能为空！");
+			}else{
+				$("#repwds").html("密码输入正确！");
+			}
+		}
+	</script>
+
+</html>

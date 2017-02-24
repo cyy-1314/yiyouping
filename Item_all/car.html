@@ -1,0 +1,244 @@
+<!doctype html>
+	
+<html lang="en">
+	
+<head>
+	<meta charset="UTF-8"/>
+	<title>car</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/car.css"/>
+	<script src="js/JQuery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+   urlinfo=window.location.href; //获取当前页面的url
+	console.log(urlinfo)
+	len=urlinfo.length;//获取url的长度
+	offset=urlinfo.indexOf("?");//设置参数字符串开始的位置
+	newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串
+	newsids=newsidinfo.split("&");//对获得的参数字符串按照“=”进行分割
+	newsid=newsids[1];//得到参数值
+	newsname=newsids[0];//得到参数名字
+	newsids=newsid.split("=");
+	newsname=newsname.split("=");
+	console.log(newsids[1]);
+	console.log(newsname[1]);
+    </script>
+    <style type="text/css">
+    	.ziti{
+    		font-size: 16px;
+    	}
+    </style>
+</head>
+<body ng-app="zxApp" onunload="checkLeave()">
+	<div class="carBox" ng-controller="zxController">
+		
+		<div class="buy1">
+			<div class="buy1_1">
+				<a href="#">
+					<img class="logo" ev="img/logo.jpg"/>
+				</a>
+			</div>
+			<div class="buy1_2">
+				<a href="php/login.php">登录</a> |
+				<a href="register.html">注册会员</a> |
+				<a href="index.html">网站首页</a> |
+				<a href="#">帮助中心</a>
+			</div>
+		</div>
+		
+		<div class="buy2">
+			<img src="img/buyliucheng1.gif" />
+		</div>
+		
+		<div class="buy3" >
+			<table width="100%"  border="0" cellspacing="0" cellpadding="0" id="tab">
+				<tr>
+					<td width="11%" height="35" align="center" valign="middle" class="buy3_1">图片</td>
+				    <td width="44%" valign="middle" class="buy3_1">商品名称</td>
+				    <td width="6%" align="center" valign="middle" class="buy3_1">单价</td>
+				    <td width="10%" align="center" valign="middle" class="buy3_1">商城返现/优惠</td>
+				    <td width="10%" align="center" valign="middle" class="buy3_1">数量</td>
+				    <td width="9%" align="center" valign="middle" class="buy3_1">小计</td>
+				    <td width="10%" align="center" valign="middle" class="buy3_1">操作</td>
+				</tr>
+			   <tr ng-repeat="x in carArr">
+					<td width="11%" height="35" align="center" valign="middle" class="buy3_1"><img ng-src="{{x.smallImg}}" style="width: 60px;height: 60px;margin-top: 7px;"/></td>
+					<td width="44%" valign="middle" class="buy3_1">{{x.productName}}</td>
+					<td width="6%" align="center" valign="middle" class="buy3_1 ziti">￥{{x.currentPrice}}</td>
+					<td width="10%" align="center" valign="middle" class="buy3_1 ziti">￥{{x.fanxian}}</td>
+					<td width="10%" align="center" valign="middle" class="buy3_1 ziti">
+						<table width="59" cellspacing="0" style="border: 1px solid transparent;">
+							<tbody>
+								<tr>
+									<td width="13" style="padding-top: 4px;" ng-click="jian(x.carId,x.shuliang)"><img src="img/b1.jpg"/></td>
+									<td width="28" style="text-align: center;" id="shuliang">{{x.shuliang}}</td>
+									<td width="12" style="padding-top: 4px;" ng-click="jia(x.carId,x.shuliang)"><img src="img/b2.jpg"/></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td width="9%" align="center" valign="middle" class="buy3_1 ziti">￥{{x.shuliang*x.currentPrice}}</td>
+					<td width="10%" align="center" valign="middle" class="buy3_1"><div ng-click="delect(x.carId)">删除</div>
+					</td>
+					<!--<td width="10%" align="center" valign="middle" class="buy3_1"><div onclick="return confirm('确定')" ng-click="delect(x.carId)">删除</div></td>-->
+				</tr>
+			</table>
+		</div>
+		
+		<div class="buy4">
+			<div class="buy4_1">
+				<a href="index.html">
+					<img src="img/buy_btn2.gif" />
+				</a>
+				<a ng-click="empty()">
+					<img src="img/buy_btn3.gif" />
+				</a>
+			</div>
+			<div class="buy4_2">
+				<p>原总价：￥{{getTotal(carArr)}}元  商城返现：￥0元</p>
+				<p>共<strong>{{getshuliang(carArr)}}</strong>商品，合计 ：<strong>￥{{getTotal(carArr)}}元</strong></p>
+				<!--<p>原总价：￥{{carArr[0].sum+carArr[1].sum}}元  商城返现：￥{{carArr[0].fanxian+carArr[1].fanxian}}元</p>
+				<p>共<strong>{{carArr[0].shuliang+carArr[1].shuliang}}</strong>商品，合计 ：<strong>￥{{carArr[0].sum+carArr[1].sum}}元</strong></p>-->
+			</div>
+		</div>
+		<div class="buy5">
+			<p>全场优惠：<span>满49元包邮</span>（香港、台湾、澳门、海外除外）。　其它优惠券请点击结算后使用；</p>
+		</div>
+		<div class="buy6">
+			<a href="index.html">
+				<img src="img/ace.jpg" width="99" height="28" border="0" />
+			</a> &nbsp;&nbsp;
+			<!--"car.html?cheapId={{bigInfo[0].cheapId}-->
+  			<a class="buyBtn" ng-href="orderInfo.php">
+  				<img src="img/buy_btn1.png" />
+  			</a>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+</body>
+<script>
+    var app=angular.module("zxApp",[]);
+	app.controller("zxController",function ($scope,$http){
+		
+		$http({
+					method: "get",
+					url: "php/car.php",
+					params:{
+					  cheapId:newsname[1],
+					  shuliang:newsids[1]
+					 },
+				   }).success(function(data){
+				   	console.log(data)
+                      $scope.carArr=data;
+				});
+			 
+				
+      $scope.jia=function(obj,shuliang){
+	        $http({
+					method: "get",
+					url: "php/car_yunsuanjia.php",
+					params:{
+					  carId:obj,
+					  shuliang:shuliang
+					 },
+				   }).success(function(data){
+					  console.log(data)
+					   $scope.carArr=data;
+					   $scope.parseInt = parseInt;
+					   console.log(typeof $scope.carArr[0].shuliang)
+					   console.log( $scope.carArr[1].shuliang)
+					});
+			}
+         $scope.jian=function(obj,shuliang){
+	        $http({
+					method: "get",
+					url: "php/car_yunsuanjian.php",
+					params:{
+					  carId:obj,
+					  shuliangjian:shuliang
+					 },
+				   }).success(function(data){
+					  console.log(data)
+					   $scope.carArr=data;
+					});
+			}
+   //删除    
+$scope.delect=function(carId){
+//	var numshuarr =urlinfo.split('num=');
+//          numshuarr[1]=0;
+//			var hrefStr = numshuarr.join("num=");
+//			window.location.href=hrefStr;
+	
+	$.ajax({
+			type:"get",
+			url:"php/car_delect.php",
+			data:{
+				del:carId
+			},
+			dataType:"json",
+		success:function(data){
+			 $scope.carArr=data;
+			 console.log(data)
+			 if(data.errcode == 0) {
+			   $scope.carArr=[];
+			}
+		},
+		error:function(errors){
+			console.log("失败")
+		},
+	  async:true
+       });
+		}
+          
+
+	$scope.empty=function(){
+		$.ajax({
+			type:"get",
+			url:"php/car_empty.php",
+			dataType:"json",
+		success:function(data){
+			console.log(data);
+			 $scope.carArr=data;
+			 if(data.errcode == 0){
+				$scope.carArr=[];
+			}
+       },
+		error:function(errors){
+			console.log("失败")
+		},
+	  async:true
+     });
+		}
+//计算总数量
+	$scope.getshuliang=function(argu){
+     var quantities = 0;
+		for (var i=0;i<argu.length;i++){
+			quantities+=parseInt(argu[i].shuliang);
+		}
+      return quantities;
+	}
+//	计算总金额
+	$scope.getTotal=function(argu){
+		var total = 0;
+		for (var i=0;i<argu.length;i++){
+			total+=parseInt(argu[i].sum);
+		}
+      return total;
+	}
+	
+	
+	})
+</script>
+
+
+
+		
+</html>
+
+  
+
+
+
+
+	
+

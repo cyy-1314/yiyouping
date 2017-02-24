@@ -1,0 +1,280 @@
+	.oneFloor {
+		width: 1200px;
+		height: 40px;
+		border-bottom: 4px solid royalblue;
+	}
+	
+	.oneFloorTitle {
+		width: 500px;
+		height: 40px;
+		color: black;
+		font-size: 23px;
+		line-height: 40px;
+		float: left;
+		font-weight: bold;
+	}
+	
+	.oneFloorRight {
+		float: right;
+		height: 40px;
+		line-height: 40px;
+		padding-right: 20px;
+	}
+	
+	.oneFloorBox {
+		width: 1200px;
+		height: 500px;
+	}
+	
+	.oneFloorDetail {
+		border: 1px solid lightgray;
+	}
+	
+	.oneFloorBox:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	
+	.oneFloorDetail {
+		width: 948px;
+		height: 498px;
+		float: left;
+	}
+
+	
+	.iphonesBox {
+		width: 200px;
+		height: 200px;
+		background-color: aliceblue;
+		float: left;
+	}
+	
+	.iphones {
+		width: 98px;
+		height: 48px;
+		border: 1px solid #C0AC98;
+	 
+		display: block;
+		float: left;
+	}
+	
+	.oneFloorSilder {
+		width: 250px;
+		height: 500px;
+		float: right;
+		/*background: darkturquoise;*/
+	}
+	
+	.tabRank {
+		width: 250px;
+		border: 1px solid #d8d8d8;
+	}
+	
+	.tabRank .hd {
+		background-color: #e2e2e2;
+		height: 29px;
+		line-height: 28px;
+		border-bottom: none;
+	}
+	
+	.tabRank .hd h3 {
+		float: left;
+		width: 124px;
+		/*overflow: hidden;*/
+		text-align: center;
+	}
+	
+	.tabRank .hd h3 a {
+		color: #333;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	
+	.tabRank .hd h3.on {
+		background-color: #f9f9f9;
+		height: 29px;
+	}
+	
+	.tabRank .hd h3.on a {
+		display: block;
+		color: #e72410;
+	}
+	
+	.tabRank .bd {
+		height: 448px;
+		background-color: #f9f9f9;
+		clear: both;
+	}
+	
+	.tabRank .bd ul {
+		padding: 10px 8px;
+	}
+	
+	.tabRank .bd .ulList li {
+		border-bottom: 1px solid #e5e5e5;
+		height: 40px;
+		line-height: 42px;
+		width: 232px !important;
+	}
+	
+	.tabRank .bd .ulList li a {
+		color: #333;
+	}
+	
+	.tabRank .bd .ulList li .num {
+		font-size: 14px;
+		font-weight: bold;
+		color: #333;
+ 
+		width: 24px;
+		height: 20px;
+		display: block;
+		float: left;
+		line-height: 17px;
+		text-align: center;
+		margin-top: 13px;
+		padding-right: 6px;
+	}
+	
+	.tabRank .bd .ulList li.t .num {
+		background-position: 0 0;
+		color: #fff;
+	}
+	
+	.tabRank .bd .ulList li.t {
+		line-height: 42px !important;
+	}
+	
+	.tabRank .bd .ulList li.on img {
+		width: 150px;
+		height: 94px;
+		padding: 4px;
+		border: 1px solid #d0d0d0;
+		background-color: #fff;
+	}
+	
+	.tabRank .bd .ulList li .pubtext {
+		color: #777;
+		display: none;
+	}
+	
+	.tabRank .bd .ulList li .pubtext strong {
+		color: #E72410;
+	}
+	
+	.tabRank .bd .ulList li .pubtext a {
+		color: #E72410;
+	}
+	
+	.tabRank .bd .ulList li .pubpic {
+		display: none;
+	}
+	
+	.tabRank .bd .ulList li.on {
+		height: 150px;
+		text-align: center;
+		line-height: 22px !important;
+	}
+	
+	.tabRank .bd .ulList li.on .pubpic {
+		display: block;
+		padding-top: 5px;
+	}
+	
+	.tabRank .bd .ulList li.on .pubtext {
+		color: #777;
+		display: block;
+	}
+	
+	.tabRank .bd .ulList2 .pic {
+		float: left;
+	}
+	
+	.tabRank .bd .ulList2 .con {
+		float: right;
+		width: 160px;
+	}
+	
+	.tabRank .bd .ulList2 li {
+		clear: both;
+		padding-top: 8px;
+		height: 58px;
+		border-bottom: 1px solid #E5E5E5;
+	}
+	
+	.tabRank .bd .ulList2 img {
+		width: 57px;
+		height: 47px;
+		padding: 1px;
+		border: 1px solid #d0d0d0;
+	 
+		float: left;
+	}
+	
+	.iphonesPic {
+		width: 748px;
+		height: 200px;
+		/*background-color: aquamarine;*/
+		float: right;
+	}
+	
+	.detB {
+		float: left;
+		width: 177px;
+		height: 285px;
+		padding: 5px;
+		border: 1px solid white;
+	}
+	
+	.detBimg {
+		width: 160px;
+		height: 160px;
+		margin-left: 8px;
+	}
+	
+	.detBut {
+		background-color: #F4F4F4;
+	}
+	
+	.detBDiv {
+		margin: 5px;
+	}
+	
+	.detBDiv div:nth-child(1) {
+		font-size: 15px;
+		float: left;
+		color: red;
+	}
+	
+	.detBDiv div:nth-child(2) {
+		font-size: 15px;
+		float: right;
+		color: darkgray;
+		text-decoration: line-through;
+	}
+	/*清浮动*/
+	
+	.detBDiv:after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	
+	.detBNum {
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 15px;
+		color: darkgray;
+		border-top: 1px solid lightgray;
+	}
+	
+	.oneFSildTitle {
+		height: 50px;
+		background-color: black;
+		color: white;
+		font-size: 16px;
+		line-height: 50px;
+		text-align: center;
+	}

@@ -1,0 +1,10 @@
+
+
+document.writeln("<p class=\"rar_cxzq\">");
+document.writeln("<a href=\"/zt/m5/?hdid=4&form=cuxiao\" target=\"_blank\"><img src=\"/adimg/img/fl_ad/4.jpg\" width=\"196\" height=\"73\" /></a>");
+document.writeln("</p><p class=\"rar_cxzq\">");
+document.writeln("<a href=\"/zt/m4/?hdid=6&form=cuxiao\" target=\"_blank\"><img src=\"/adimg/img/fl_ad/3.jpg\" width=\"196\" height=\"73\" /></a>");
+document.writeln("</p>");
+
+
+		  

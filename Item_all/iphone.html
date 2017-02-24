@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css"></style>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/iphone.css"/>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+
+	<body ng-app="">
+		<div ng-include="'header_title.php'"></div>
+		<div class="isearch">
+			<div class="appsea">
+				<div class="apptitlt">
+					<img src="img/top_title.jpg" style="width: 1012px;height: 135px;" />
+				</div>
+				<div class="appbook">
+					<div class="searchbook appbook1">
+						<input type="text" class="snClass searchText" id="textfield1" value="输入产品序列号">
+						<input class="searchBtn" type="submit" name="" id="psubmit" value="" />
+					</div>
+				</div>
+				<div class="desctext">
+					<div class="descfont" style="color: #CCCCCC;">
+						<p style="color:#ffffff;">产品信息查询:</p>
+						本网提供苹果官网序列号查询功能,根据苹果官网序列号,IMEI查询iPhone、ipad的激活日期、保修期、生产日期和维修记录等相关信息。帮助您识别产品的真伪！
+						 <br />
+					</div>
+					<div class="descFont" style="color:#CCCCCC; text-indent:30px; padding-top:14px;">查看“序列号 / MEID / IMEI”的方法: 设置 -&gt; 通用 -&gt; 关于本机
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-include="'footer.html'"></div>
+	</body>
+
+</html>

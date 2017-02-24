@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageTwo.css"/>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="zxApp">
+    <div ng-include="'header_title.php'"></div>
+    <div class="w960px" ng-controller="myController">
+        <div class="houdongall"><!--广告列表-->
+            <div class="top_hot_tittle"> <h1>活动正在火热进行中</h1></div>
+            <div class="adlist_all" >
+                 <div class="adlist" ng-repeat="x in pageArr">
+                    <div class="adlist_AK">{{x.title}}<span style="color:#F00"></span></div>
+                    <div class="adlist1">
+                        <div class="adlist1_1"></div>
+                        <div class="adlist1_3">
+                            <div class="adlist1_3_1"></div>
+                            <div class="adlist1_3_2"><a href="#" target="_blank"><img src="pageTwoImg/btn_tit.png" alt="去看看" width="80" height="34" border="0" ></a></div>
+                        </div>
+                        <div class="adlist1_1">参于人：{{x.person}}人</div>
+                        <div class="adlist1_2">-</div>
+                    </div>
+                    <div class="adlist2"><a href="#" target="_blank"><img ng-src="{{x.imgs}}" alt="超级0元购 一优品持续约惠活动"></a></div>
+                </div>
+            </div>
+            <div class="huodongright">
+                <div class="huodongright_1">热门标签</div>
+                <div class="link_cloud cfix">
+                    <a href="#">iphone5C</a>
+                    <a href="#">iphone5/5S</a>
+                    <a href="#">Note3</a>
+                    <a href="#">i9500/S4</a>
+                    <a href="#">iphone4</a>
+                    <a href="#">ipad2/3/4</a>
+                    <a href="#">ipad mini</a>
+                    <a href="#">N7100</a>
+                    <a href="">I9082</a>
+                    <a href="">I9300</a>
+                    <a href="">I9220</a>
+                    <a href="">索尼保护套</a>
+                    <a href="">小米保护套</a>
+                    <a href="">华为保护套</a>
+                    <a href="">HTC保护套 </a>
+                    <a href="">OPPO保护套</a>
+                    <a href="">魅族保护套</a>
+                    <a href="#">诺基亚保护套</a>
+                    <a href="#">酷派保护套</a>
+                    <a href="#">步步高保护套</a>
+                    <a href="#">移动电源</a>
+                    <a href="#">手机电池</a>
+                    <a href="#">数据线</a>
+                    <a href="#">充电器</a>
+                    <a href="#">车载用品</a>
+                    <a href="#">蓝牙</a>
+                    <a href="#">耳机</a>
+                    <a href="#">音响</a>
+                    <a href="#">防尘塞</a>
+                    <a href="#">按键贴</a>
+                    <a href="#">手写笔</a>
+                    <a href="#">存储卡</a>
+                    <a href="#">手提包</a>
+                    <a href="#">支 架</a>
+                </div>
+                <div class="huodongright_1">活动公告</div>
+                <div class="huodongright_new">
+                    <ul>
+                    		  <li ng-repeat="x in pageArr">
+                            <nobr>
+                                <a href="#" target="_blank">>{{x.title}}</a>
+                            </nobr>
+                        </li>
+                        <!--<li>
+                            <nobr>
+                                <a href="#" target="_blank">> 超级一元购 XX持续约惠活动</a>
+                            </nobr>
+                        </li>
+                        <li>
+                            <nobr>
+                                <a href="#" target="_blank">> iphone4/4s精品特辑</a>
+                            </nobr>
+                        </li>
+                        <li>
+                            <nobr>
+                                <a href="#" target="_blank">> 总共有12个a标签</a>
+                            </nobr>
+                        </li>
+                        <li>
+                            <nobr>
+                                <a href="#" target="_blank">> 每个标签的名字对应着大方框中的标题</a>
+                            </nobr>
+                        </li>
+                        <li>
+                            <nobr>
+                                <a href="#" target="_blank">> 所以应该先建立一个数据库</a>
+                            </nobr>
+                        </li>
+                        <li>
+                            <nobr>
+                                <a href="#" target="_blank">> 然后从用php结合html遍历出来</a>
+                            </nobr>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include="'footer.html'"></div>
+</body>
+<script>
+    var app=angular.module("zxApp",[]);
+    app.controller("myController",function ($scope,$http){
+       	$http({
+					method: "get",
+					url: "php/pagetwo.php",
+					}).success(function(data){
+//					  console.log(data)
+					  $scope.pageArr=data;
+//					  console.log( $scope.carArr);
+				});
+    })
+</script>
+</html>

@@ -1,0 +1,5 @@
+
+
+document.writeln("<a class=\"topa\" href=\"\/order\/shopbuy\/?action=show\"><b class=\"bcar\">¹ºÎï³µ<span class=\"cff4500\">0</span>¼þ</b></a>");
+
+

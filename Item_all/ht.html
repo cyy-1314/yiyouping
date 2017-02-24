@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<html>
+
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/improts.css" />
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+		<script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+
+	</head>
+
+	<body  >
+		<ul id="nav"   >
+
+			<li id="mainCate-1" class="mainCate">
+				<div>
+					<h3><span>&gt;</span><a href="#">苹果专区</a></h3>
+				<p>
+					<a ng-repeat="x in iphoneBox" href="#">{{x.productFather}} |</a>
+					<!--<a href="#"> iphohe5s |</a>
+					<a href="#">ipad</a>-->
+				</p>
+				</div>
+				<div class="subCate" style="padding: 20px;">
+					<ul id="sub-ul-1">
+						<h4>苹果保护壳/保护套</h4>
+						<li>
+							<div class="subdiv" ng-repeat=" (key,value) in oneftable ">
+								<a href="xiangqing.html?Id={{value.productFather}}">{{value.productFather}}</a>
+							</div>	 
+						</li>
+					</ul>
+					<div id="sub-div-1">
+						<div>热门品牌</div>
+						<div>
+							<a>卡来登</a>
+						</div>
+						<div>
+							<a>洛克</a>
+						</div>
+						<div>
+							<a>星期八</a>
+						</div>
+						<div>
+							<a>倍思</a>
+						</div>
+						<div>
+							<a>REMAX</a>
+						</div>
+						<div>
+							<a>REMAX</a>
+						</div>
+					</div>
+				</div>
+
+			</li>
+
+			<li id="mainCate-2" class="mainCate  "  >
+				<h3><span>&gt;</span><a href="#" >三星专区</a></h3>
+				<p>
+					<a href="#" ng-repeat="x in iphoneBox1">{{x.productFather}}  |</a>
+					<a href="#">I9500/S4 |</a>
+					<a href="#">N7100</a>
+				</p>
+
+				<div class="subCate"  style="padding: 20px;">
+					<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">ipad</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+				</div>
+			</li>
+
+			<li id="mainCate-3" class="mainCate">
+				<h3><span>&gt;</span><a href="#">智能手机</a></h3>
+				<p>
+					<a href="#">小米 |</a>
+					<a href="#">华为 |</a>
+					<a href="#">HTC</a>
+				</p>
+
+				<div class="subCate"  style="padding: 20px;">
+					<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">ipad</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+				</div>
+			
+			</li>
+
+			<li id="mainCate-4" class="mainCate  ">
+				<h3><span>&gt;</span><a href="#">电池耳机车载</a></h3>
+				<p>
+					<a href="#">蓝牙耳机 |</a>
+					<a href="#">移动电源 |</a>
+					<a href="#">电池</a>
+				</p>
+
+				<div class="subCate"  style="padding: 20px;">
+					<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">ipad</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+				</div>
+			
+			</li>
+
+			<li id="mainCate-5" class="mainCate">
+				<h3><span>&gt;</span><a href="#">手机周边配件</a> </h3>
+				<p>
+					<a href="#">贴膜 |</a>
+					<a href="#">防尘塞 |</a>
+					<a href="#">数据线</a>
+
+				</p>
+				<div class="subCate"  style="padding: 20px;">
+					<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">ipad</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+				</div>
+			
+			</li>
+
+			<li id="mainCate-6" class="mainCate  ">
+				<h3><span>&gt;</span><a href="#">小优导购</a></h3>
+				<p>
+					<a href="#">品牌</a>
+					<a href="#">促销</a>
+					<a href="#">新品</a>
+
+				</p>
+				<div class="subCate"  style="padding: 20px;">
+					<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5/5S</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">ipad</a>
+							</div>
+							<div class="subdiv">
+								<a href="#">iphone5C</a>
+							</div>
+				</div>
+			
+			</li>
+
+		</ul>
+
+		<div class="focusBox" style="margin:0 auto">
+			<ul class="pic">
+				<li>
+					<a href="#" target="_blank">
+						<img alt="" src="img/banner/banner01.jpg">
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank"><img alt="" src="img/banner/banner07.jpg"></a>
+				</li>
+				<li>
+					<a href="#" target="_blank"><img alt="" src="img/banner/banner08.jpg"></a>
+				</li>
+				<li>
+					<a href="#" target="_blank"><img alt="" src="img/banner/banner08.jpg"></a>
+				</li>
+			</ul>
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+			<ul class="hd">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+jQuery("#nav ").slide({
+		type: "menu ", //效果类型
+		titCell: ".mainCate ", // 鼠标触发对象
+		targetCell: ".subCate ", // 效果对象，必须被titCell包含
+		delayTime: 0, // 效果时间
+		triggerTime: 0, //鼠标延迟触发时间
+		defaultPlay: false, //默认执行
+		returnDefault: true //返回默认
+	});
+	jQuery(".focusBox").slide({
+		mainCell: ".pic",
+		effect: "left",
+		autoPlay: true,
+		delayTime: 300
+	});
+	$("#tabRank li").hover(function() {
+		$(this).addClass("on").siblings().removeClass("on")
+	}, function() {});
+	/* Tab切换 */
+	$("#tabRank").slide({
+		titCell: "dt h3",
+		mainCell: "dd",
+		autoPlay: false,
+		effect: "left",
+		delayTime: 300
+	});
+	</script>
+
+	</html>

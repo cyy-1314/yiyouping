@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iphone.css" />
+			<script src="js/JQuery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css"></style>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/details.css" />
+	</head>
+
+	<body ng-app="cyyapp" style="background-color: #F4F4F4;">
+		<!--导航栏-->
+		<div ng-include="'header_title.php'"></div>
+		<div style="clear: both;"></div>
+		<!--通过搜索得到的商品展示-->
+		<div class="decontent">
+			<div class="sopai">
+				为您找到与&nbsp;&nbsp;<em id="goodslei" style="color: #DBD156;"></em>&nbsp;&nbsp;相关的商品<b id="goodsnum" style="font-size: larger; font-weight: bold;"></b>条:
+			</div>
+			<div class="allgoods">
+				<div class="shops">
+					<ul class="solist" ng-controller="mycon">
+						<li ng-repeat="x in data">
+							<div class="solisttop"></div>
+							<div class="solistbottom"></div>
+							<div class="solistleft"></div>
+							<div class="solitright"></div>
+							<div class="goodimg">
+								<div class="goodimgs" style="height: 314px;">
+									<a href="#"><img style="width: 314px;height: 314px;" src="{{x.productImg}}" /></a>
+								</div>
+								<div class="goodtit">
+									<a style="margin-left: 4px; color: #616161;line-height: 30px;cursor: pointer;" href="#" target="_blank">{{x.productName}}</a>
+								</div>
+								<h4 style="padding: 5px 10px 0 10px;">
+									<em class="em1" style="padding-bottom: 0.5px;">￥{{x.currentPrice}}</em>
+									<span class="em2">￥{{x.oriPrice}}</span>
+								</h4>
+							</div>
+							<div class="goodimgss" id="change">
+								<div class="lijibuy">
+									<span style="color:#fff;line-height:35px;font-size:16px;">已售{{x.saleNum}}件</span>
+									{{x.threeid}}
+									<span class="lijibuy2" style=" color:#FD3564;line-height:32px;width:100px;font-size:20px;">立即购买</span>
+								</div>
+								<span class="lijibuy3" style=" color:#FD3564;line-height:32px;width:100px;font-size:20px;"><a href="xiangqing.html?cheapId={{x.cheapId}}">立即购买</a></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div ng-include="'footer.html'"></div>
+	</body>
+	<script type="text/javascript">
+		function GetQueryString(key) {
+			var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+			var result = window.location.search.substr(1).match(reg);
+			return result ? decodeURIComponent(result[2]) : null;
+		}
+		$("#sub").click(function(){
+			alert("11");
+		})
+		var keywords = GetQueryString("searchText");
+		var app = angular.module('cyyapp', []);
+		app.controller('mycon', function($scope, $q, $http) {
+			$("#goodslei").html(keywords);
+//$q是Angular的一种内置服务，它可以使你异步地执行函数，并且当函数执行完成时它允许你使用函数的返回值（或异常）
+//defer的字面意思是延迟，$q.defer() 可以创建一个deferred实例（延迟对象实例）
+//promise的目的是允许interested parties 访问deferred任务完成的结果。
+			var defer = $q.defer();
+			var promise = defer.promise;
+			$http({
+				method: "get",
+				params: {
+					"keywords": keywords
+				},
+				url: "php/details.php"
+			}).success(function(data) {
+				defer.resolve(data);
+				//console.log(defer.resolve(data));
+			});
+			promise.then(function(data) {
+				$scope.data = data;
+				console.log(data);
+//				console.log($scope.data[0].threeid);
+				var goodnums = $scope.data.length;
+				$("#goodsnum").html(goodnums);
+			})
+		})
+		
+	</script>
+
+</html>

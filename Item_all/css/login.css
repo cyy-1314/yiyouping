@@ -1,0 +1,181 @@
+.loginBox{
+	width:960px;
+	/*background-color: pink;*/
+	margin: 20px auto;
+}
+.login1{
+	float: left;
+    width: 960px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ededed;
+    margin-bottom: 10px;
+}
+.login1_1{
+	float: left;
+}
+.logo{
+	vertical-align: middle;
+}
+.login1_2{
+	float: right;
+	margin-top: 15px;
+	padding-right: 20px;
+}
+.login1_2 a{
+	color:#535353;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+	text-decoration: none;
+}
+.login1_2 a:hover,.login3 div a:hover,.nreg_zpay:hover,.nreg_sina:hover,.nreg_qq:hover{
+	color: red;
+	text-decoration:underline;
+}
+.login2{
+	float: left;
+	width:960px;
+	margin-top: 30px;
+}
+.login2_1{
+	float: left;
+    width: 450px;
+    padding-left: 30px;
+}
+.input1,.input2{
+	text-align: right;
+	padding-right: 50px;
+	margin-bottom: 30px;
+}
+.input1 input,.input2 input{
+    width: 310px;
+    height: 30px;
+    border: solid 1px #d5d5d5;
+    line-height: 28px;
+    font-size: 14px;
+}
+.login2_1_2{
+	padding-left: 100px;
+    float: left;
+    width: 450px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.nlog_submit{
+	width: 139px;
+    height: 51px;
+    /*outline: none;*/
+    border: 1px solid transparent;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -145px -1px;
+    cursor: pointer;
+}
+.nlog_submit1{
+	width: 139px;
+    height: 51px;
+    outline: none;
+    border: 1px solid transparent;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -145px -53px;
+    cursor: pointer;
+}
+.login2_1_2 a{
+	color: #9d9d9d;
+    text-decoration: none;
+	font-size: 14px;
+}
+.login2_1_3{
+	padding-left: 90px;
+    width: 400px;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+	line-height:18px;
+}
+.login2_1_4{
+	padding-left: 90px;
+	color: #e1e1e1;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+}
+.nreg_zpay{
+	padding: 3px 5px 3px 25px;
+	background: url(../img/reg_sprite2.png) no-repeat;
+	background-position: -314px -67px;
+}
+.nreg_sina{
+	background: url(../img/reg_sprite2.png) no-repeat;
+	background-position: -149px -207px;
+    padding-left: 25px;
+    padding-right: 3px;
+}
+.nreg_qq{
+	background: url(../img/reg_sprite2.png) no-repeat;
+	padding-left: 30px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-position: -312px -90px;
+}
+.login2_2{
+	float: left;
+    width: 350px;
+    margin-left: 30px;
+    border-left: dashed 1px #ededed;
+    padding: 30px;
+}
+.login2_2_1{
+	padding-top:5px;
+	letter-spacing:1px;
+	font-weight:bold;
+}
+.login2_2_2{
+	padding-top:10px;
+	padding-bottom:15px;
+	font-size: 12px;
+	line-height:18px;
+	color:#939393;
+}
+.nlog_reg{
+	width: 127px;
+    height: 32px;
+    display: block;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -4px -160px;
+}
+.nlog_reg1{
+	width: 127px;
+    height: 32px;
+    display: block;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -4px -194px;
+}
+.login3{
+	float: left;
+    width: 960px;
+    border-top: solid 2px #e6e6e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #757575;
+    line-height: 24px;
+    background-color: #f7f7f7;
+    margin-top: 10px;
+}
+.login3 div{
+	float:left;
+	width:960px;
+	text-align:right;
+	color:#535353;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+}
+.login3 div a{
+	color:#535353;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+    text-decoration: none;
+}

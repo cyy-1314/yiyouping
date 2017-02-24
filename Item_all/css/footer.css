@@ -1,0 +1,114 @@
+/*底部*/
+.footBox{
+	width: 100%;
+}
+.images{
+	text-align: center;
+}
+.images>a>img{
+	width:1200px;
+	height:120px;
+}
+.images>a>img:hover{
+	cursor:pointer;
+}
+.footText{
+	width: 100%;
+	background-color: #3A3A3A;
+	color:#A1A4A1;
+}
+.footText0{
+	width:1200px;
+	height:40px;
+	background-image: url(../img/foot2.png);
+	margin: 0 auto;
+}
+.footText1{
+	width:1200px;
+	margin-bottom: 10px;
+	margin: auto;
+}
+.footText1_0 ul{
+	float: left;
+    width: 190px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    padding-left: 45px;
+   
+}
+.footText1_0 ul li a,.footText3 a,.footText1_1_1,.footText3{
+	color:#A1A4A1;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+	text-decoration: none;
+}
+.footText1_0 ul li a:hover,.footText3 a:hover{
+	color:white;
+	cursor:pointer;
+	text-decoration:underline;
+}
+.footText1_1{
+	float: left;
+    width: 220px;
+    padding-left: 30px;
+}
+.footText1_1_0{
+    font-size: 30px;
+    font-weight: bold;
+    color: orange;
+    line-height: 30px;
+}
+.footText1_1_1{
+    color: #7d7d7d;
+}
+.footText2{
+	clear: both;
+}
+.footText3{
+	margin-top: 20px;
+	text-align: center;
+}
+
+/*右侧固定定位部分*/
+#tbox{
+	/*float: left;*/
+	position: fixed;
+	right:10px;
+	bottom:15px;
+}
+#weixin,#qqkf,#wwkf,#gotop{
+	width:54px;
+	height: 56px;
+	background: url(../img/icon_kf.png) no-repeat;
+	display:block;
+}
+#weixin{
+	background-position: 0 0;
+}
+#weixin:hover #code_img{
+	display: block;
+}
+#code_img{
+	width: 270px;
+    height: 355px;
+    background: url(../img/weixin_icon.gif) -3px -4px no-repeat;
+    position: fixed;
+    right: 65px;
+    bottom: 0;
+    display:none;
+}
+
+#qqkf{
+    background-position: 0 -59px;
+}
+#wwkf{
+	background-position: 0 -118px;
+}
+#gotop{
+	background-position: 0 -177px;
+}
+
+
+

@@ -1,0 +1,228 @@
+		    form{
+				display: block;
+			}
+			.w960px2{
+				margin: auto;
+				width: 1200px;
+				padding-top: 15px;
+
+			}
+			.pro1{
+				float: left;
+				width: 1200px;
+				margin-bottom: 10px;
+			}
+			a.linka5a5:link{
+				color: #535353;
+				text-decoration: none;
+			}
+			.pro1{
+				float: left;
+				width: 1200px;
+				margin-bottom: 10px;
+			}
+			.pro1_1{
+				float: left;
+				width: 420px;
+				margin-right: 30px;
+				position: relative;
+				left: 0px;
+				top: 0px;
+			}
+			.pro1_1_right{
+				float: left;
+				width: 750px;
+			}
+			.pro1_2{
+				float: left;
+				width: 750px;
+				font-size: 16px;
+				font-weight: bold;
+				margin-bottom: 15px;
+				color: #444444;
+				line-height: 24px;
+			}
+			.pro1_4{
+				float: left;
+				width: 100%;
+				font-size: 12px;
+				color: #8a8a8a;
+			}
+			.pro1_5{
+				float: left;
+				width: 100%;
+				
+				font-size: 12px;
+				color: #8a8a8a;
+				margin-bottom: 15px;
+			}
+			.pro1_5_1{
+				float: left;
+				font-size: 12px;
+				color: #8A8A8A;
+				margin-right: 20px;
+				line-height: 36px;
+				margin-top: 5px;
+			}
+			.colord3{
+				text-decoration: line-through;
+				font-size: 12px;
+				color: #959595;
+				font-weight: normal;
+			}
+			.pro1_5_2{
+				float: left;
+				font-size: 12px;
+				color: #8A8A8A;
+				margin-right: 10px;
+				line-height: 36px;
+			}
+			.font14{
+				font-size: 14px;
+			}
+			.cff4500{
+				color: #ff4500;
+			}
+			.font24{
+				color: #df0000;
+				font: 400 24px;
+			}
+			strong{
+				font-weight: bold;
+			}
+			.pro1_5{
+				float: left;
+				width: 100%;
+				font-size: 12px;
+				color: #8a8a8a;
+				margin-bottom: 15px;
+			}
+			.ptop2_1{
+				float: left;
+				width: 740px;
+				background: #f8f8f8;
+				padding: 1px 1px 10px 6px;
+				border: #ff8c00 1px solid;
+			}
+			.ptop2_t1{
+				float: left;
+				height: 28px;
+				width: 730px;
+				line-height: 28px;
+				color: #8A8A8A;
+				margin-bottom: 10px;
+			}
+			.caimg ul{
+				float: left;
+				height: auto;
+				width: 520px;
+			}
+			.caimg ul li{
+				float: left;
+				display: inline;
+				margin-right: 5px;
+				width: auto;
+				overflow: hidden;
+				margin-bottom: 5px;
+			}
+			.caimg .select a{
+				border: 2px solid #ff6701;
+				margin: 0px;
+			} 
+			.caimg ul li a{
+				display: block;
+				border: 1px solid #CCCCCC;
+				padding: 2px;
+				margin: 1px;
+				background: #fff;
+			}
+			#ptop2_1{
+				float: left;
+				width: 740px;
+				background: #F8F8F8;
+				padding: 1px 1px 10px 6px;
+				border: #FF8C00 1px solid;
+			}
+			.ptop2_t1{
+				float: left;
+				height: 28px;
+				width: 730px;
+				line-height: 28px;
+				color: #8a8a8a;
+				margin-bottom: 10px;
+			}
+			.ptop2_t1a{
+				float: left;
+				height: 28px;
+				line-height: 28px;
+			}
+			.c005eb9{
+				color: #005eb9;
+			}
+			.ptop2_t1b{
+				float: left;
+				height: 23px;
+				width: 393px;
+				line-height: 23px;
+				vertical-align: middle;
+				padding-top: 5px;
+			}
+			.ptop2_t1buy{
+				float: left;
+				margin-top: 10px;
+				margin-right: 5px;
+			}
+			a:link{
+				color: #535353;
+				text-decoration: none;
+			}
+			.proleft_all{
+				float: left;
+				width: 250px;
+				margin-bottom: 10px;
+				margin-right: 10px;
+			}
+			.proleft{
+				float: left;
+				width: 248px;
+				border: #d8d8d8 solid 1px;
+				margin-bottom: 15px;
+			}
+			.proleft_1{
+				float: left;
+				width: 228px;
+				border-bottom: #ffa739 solid 2px;
+				background-image: url(xiangqingImg/floatbg2v.gif);
+				font-size: 16px;
+				padding: 9px 10px;
+				margin-bottom: 10px;
+			}
+			.proleft_2{
+				float: left;
+				width: 238px;
+				border-bottom: solid #ececec 1px;
+				padding-bottom: 10px;
+				margin-bottom: 15px;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+			.proleft_2_1{
+				float: left;
+				width: 75px;
+				margin-right: 5px;
+				text-align: center;
+			}
+			.proleft_2_2{
+				float: left;
+				width: 155px;
+				color: #7e7e7e;
+			}
+			.proleft_2_3{
+				float: left;
+				width: 155px;
+				color: #cacaca;
+				margin-top: 5px;
+			}
+			#showcos span{
+				display: block;
+			}

@@ -1,0 +1,6 @@
+
+document.writeln("1347498651@qq.com")
+document.writeln("|")
+document.writeln("<a href=\"\/myCenter\/\">会员中心<\/a>")
+document.writeln("|")
+document.writeln(" <a href=\"\/myCenter\/logout\">注销<\/a>")

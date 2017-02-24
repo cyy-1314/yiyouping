@@ -1,0 +1,102 @@
+.carBox{
+	width:960px;
+	/*background-color: pink;*/
+	margin: 20px auto;
+}
+.buy1{
+	float: left;
+    width: 960px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ededed;
+    margin-bottom: 10px;
+}
+.buy1_1{
+	float: left;
+}
+.logo{
+	vertical-align: middle;
+}
+.buy1_2{
+	float: right;
+	margin-top: 15px;
+	padding-right: 20px;
+}
+.buy1_2 a{
+	color:#535353;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+	text-decoration: none;
+}
+.buy1_2 a:hover{
+	color: red;
+	text-decoration:underline;
+}
+.buy2{
+	margin-top: 10px;
+    float: left;
+    width: 960px;
+    padding-bottom: 15px;
+}
+.buy3{
+	float: left;
+    width: 960px;
+    margin-bottom: 15px;
+}
+.buy3 table{
+	border: solid 1px #C8C8C8;
+}
+.buy3 table tr{
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.buy3_1,.buy4_2 p{
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+}
+.buy3_1{
+	 border-bottom: solid 1px #C8C8C8;
+    /*background-image: url(../images/buy_icon1.gif);*/
+}
+.buy4_1{
+	float: left;
+}
+.buy4_1 a{
+	text-decoration: none;
+}
+.buy4_2{
+	float: right;
+}
+.buy4_2 p{
+	text-align: right;
+}
+.buy4_2 p strong{
+	color: red;
+	font-size: 16px;
+}
+.buy5{
+	float: left;
+    width: 960px;
+    padding-bottom: 15px;
+} 
+.buy5 p{
+	text-align: right;
+	color: #CBC9C9;
+	font-size: 12px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+}
+.buy5 p span{
+	color: red;
+}
+.buy6{
+	float: right;
+    padding-bottom: 15px;
+}
+.buy6 a{
+	text-decoration: none;
+}
+.buyBtn img{
+	vertical-align: bottom;
+}

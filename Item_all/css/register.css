@@ -1,0 +1,231 @@
+.body{
+	padding: 0;
+	margin: 0;
+}
+.registerBox{
+	width:960px;
+	/*background-color: pink;*/
+	margin: 20px auto;
+}
+.register1{
+	float: left;
+    width: 960px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ededed;
+    margin-bottom: 10px;
+}
+.register1_1{
+	float: left;
+}
+.logo{
+	vertical-align: middle;
+}
+.register1_2{
+	float: right;
+	margin-top: 15px;
+	padding-right: 20px;
+}
+.register1_2 a{
+	color:#535353;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+	text-decoration: none;
+}
+.register1_2 a:hover,.register3 div a:hover,.nreg_zpay:hover,.nreg_sina:hover,.nreg_qq:hover,.register2_1_3 a:hover{
+	color: red;
+	text-decoration:underline;
+}
+.register2{
+	float: left;
+	width:960px;
+	margin-top: 30px;
+}
+.register2_1{
+	float: left;
+    width: 450px;
+    padding-left: 50px;
+}
+.input1,.input2,.input3{
+	text-align: right;
+	padding-right: 50px;
+	margin-bottom: 8px;
+}
+.ipt1,.ipt2{
+    width: 310px;
+    height: 30px;
+    border: solid 1px #d5d5d5;
+    line-height: 28px;
+    font-size: 14px;
+}
+.ipt2{
+	border: solid 1px #EFA357;
+}
+#emails,#pwds,#repwds{
+	width: 300px;
+	height: 20px;
+	background-color: white;
+	color:red;
+	font-size: 12px;
+	line-height: 18px;
+	font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+	text-align: left;
+	text-indent: 7em;
+	margin-top: 0px;
+}
+.register2_1_2{
+	padding-left: 100px;
+    float: left;
+    width: 450px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.nlog_submit{
+	float: left;
+	width: 139px;
+    height: 51px;
+    /*outline: none;*/
+    border: none;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -3px -1px;
+    cursor: pointer;
+}
+.nlog_submit1{
+	float: left;
+	width: 139px;
+    height: 51px;
+    /*outline: none;*/
+   	border: none;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -3px -54px;
+    cursor: pointer;
+}
+.register2_1_2 a{
+	color: #9d9d9d;
+    text-decoration: none;
+	font-size: 14px;
+}
+.register2_1_2 div{
+	float: left;
+    margin-top: 10px;
+    color: #EB1807;
+    padding-left: 5px;
+	color: red;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+}
+.register2_1_3{
+	float: left;
+	width:960px;
+	margin-top: 20px;
+	padding-left: 90px;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+}
+.register2_1_3 a{
+	color:#535353;
+	text-decoration: none;
+}
+.register2_1_4,.register2_2_3{
+	padding-left: 90px;
+    width: 400px;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+	line-height:18px;
+}
+.register2_1_5,.register2_2_4{
+	padding-left: 90px;
+	color: #e1e1e1;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+}
+.nreg_zpay{
+	padding: 3px 5px 3px 25px;
+	background: url(../img/reg_sprite2.png) no-repeat;
+	background-position: -314px -67px;
+}
+.nreg_sina{
+	background: url(../img/reg_sprite2.png) no-repeat;
+	background-position: -149px -207px;
+    padding-left: 25px;
+    padding-right: 3px;
+}
+.nreg_qq{
+	background: url(../img/reg_sprite2.png) no-repeat;
+	padding-left: 30px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-position: -312px -90px;
+}
+.register2_2{
+	float: left;
+    width: 350px;
+    margin-left: 30px;
+    border-left: dashed 1px #ededed;
+    padding: 30px;
+}
+.register2_2_1{
+	padding-top:5px;
+	letter-spacing:1px;
+	font-weight:bold;
+}
+.register2_2_2{
+	padding-top:10px;
+	padding-bottom:15px;
+	font-size: 12px;
+	line-height:18px;
+	color:#939393;
+}
+.nlog_reg{
+	width: 127px;
+    height: 32px;
+    display: block;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -148px -137px;
+}
+.nlog_reg1{
+	width: 127px;
+    height: 32px;
+    display: block;
+    background: url(../img/reg_sprite2.png) no-repeat;
+    background-position: -148px -172px;
+}
+.register2_2_3{
+	padding-left: 0;
+}
+.register2_2_4{
+	padding-left: 0;
+}
+.register3{
+	float: left;
+    width: 960px;
+    border-top: solid 2px #e6e6e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #757575;
+    line-height: 24px;
+    background-color: #f7f7f7;
+    margin-top: 10px;
+}
+.register3 div{
+	float:left;
+	width:960px;
+	text-align:right;
+	color:#535353;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+}
+.register3 div a{
+	color:#535353;
+	font-size: 12px;
+    line-height: 18px;
+    font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+    text-decoration: none;
+}

@@ -1,0 +1,126 @@
+#nav {
+				position: relative;
+				z-index: 1;
+				width: 220px;
+				background: #EA7C0F;
+				margin-left: 0;
+				height: 357px;
+			}
+			
+			#nav .mainCate {
+				position: relative;
+				zoom: 1;
+				border-bottom: 1px solid #FFBE44;
+				padding: 0 5px 0 5px;
+			}
+			
+			#nav .evenLeval {
+				background: #fff;
+			}
+			
+			#nav h3 {
+				height: 28px;
+				line-height: 28px;
+				font-size: 16px;
+				overflow: hidden;
+			}
+			
+			#nav h3 span {
+				width: 18px;
+				height: 15px;
+				line-height: 32px;
+				font-weight: 200;
+				font-size: 12px;
+				float: right;
+			}
+			
+			#nav h3 a {
+				color: white;
+			}
+			
+			#nav p {
+				height: 20px;
+				line-height: 20px;
+			}
+			
+			#nav p a {
+				margin-right: 10px;
+				color: #FAB22C;
+			}
+			
+			#nav .subCate {
+				display: none;
+				/*默认隐藏*/
+			 
+				position: absolute;
+				left: 220px;
+				top: 0;
+				WIDTH: 430px;
+				color: #333;
+				border: 2px solid #EA7C0F;
+				background-color: lightgray;
+			}
+			
+			#nav .subCate h4 {
+				height: 26px;
+				line-height: 26px;
+				margin: 0 0 10px 0;
+				font-size: 16px;
+				color: #333;
+			}
+			
+			#nav .subCate ul {
+				width: 230px;
+				float: left;
+				overflow: hidden;
+				padding-top: 20px;
+			}
+			
+			#nav .subCate li {
+				float: left;
+				display: inline;
+			}
+			
+			#nav .subCate li a {
+				display: block;
+				float: left;
+				padding: 0 5px;
+				line-height: 25px;
+				color: #666;
+				word-break: keep-all;
+				white-space: nowrap;
+			}
+			
+			#nav .subCate #sub-ul-1 {
+				width: 250px;
+			}
+			
+			#sub-div-1 {
+				padding: 20px;
+				background-color: #D6D4D6;
+				margin-left: 251px;
+				border-left: 1px dashed #F4BD00;
+			}
+			
+			#nav .on {
+				background: #FFFFFF;
+				color: #EA7C0F;
+			}
+			
+			#nav .on h3 a {
+				color: #EA7C0F;
+			}
+			
+			#nav .on p a {
+				color: #FAB22C;
+			}
+			
+			#nav .on .subCate {
+				display: block !important;
+				/* !important 强制显示，否则会闪烁*/
+			}
+			
+			.subdiv {
+				width: 115px;
+				display: inline-block;
+			}

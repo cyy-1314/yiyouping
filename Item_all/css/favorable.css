@@ -1,0 +1,103 @@
+	
+			.favorable {
+				height: 55px;
+				border-bottom: 1px solid #786AA9;
+				/*background-color: #000000;*/
+			}
+			
+			.favorable a {
+				height: 55px;
+				float: right;
+				font-size: 15px;
+				padding-right: 40px;
+				line-height: 55px;
+			}
+			
+			.favorableBox {
+				height: 352px;
+				width: 1198px;
+				/*background-color: yellowgreen;*/
+				border: 1px solid #786AA9;
+			}
+			
+			.fBox {
+				float: left;
+				width: 221px;
+				padding: 6px 10px 0 8px;
+				height: 317px;
+				margin: 15px auto;
+				/*background-color: red*/
+			}
+			
+			.fBoxPic {
+				width: 200px;
+				border: 1px solid #E1E1E1;
+				padding: 6px 10px 0 8px;
+				height: 267px;
+				/*background-color: blue;*/
+			}
+			
+			.fBpic {
+				width: 200px;
+				margin: 10px 0px;
+			}
+			
+			.fBnum {
+				color: red;
+				margin-left: 5px;
+				margin-right: -5px;
+			}
+			
+			.fBBot {
+				width: 220px;
+				height: 42px;
+				background-color: #B20000;
+			}
+			.fBBot a,.fBBot a:hover{
+				text-decoration: none;
+				color: #B20000;
+			}
+			.fBBotFot1{
+				display: inline;
+				font-size: 18px;
+				line-height: 42px;
+				margin-left: 10px;
+				color: white;
+			}
+			.fBBotFot2{
+				display: inline;
+				font-size: 28px;
+				line-height: 42px;
+				margin-left: -10px;
+				color: white;
+			}
+			.fBBotBuy{
+				display: inline-block;
+				width: 78px;
+				height: 31px;
+				font-size: 24px;
+				line-height: 31px;
+				text-align: center;
+				 border-radius:3px ;
+				 margin-left: 30px;
+				background-color: #FDCB5C;
+			}
+			
+		.floor{
+				background-color: red;
+			}
+			.floorSide li{
+				text-align: center;
+				line-height: 40px;
+				color:lightgray;
+				
+			}
+			.floorSideLiP{
+				height: 130px;
+				/*width: 130px;*/
+				background-color: azure;
+			}
+			.floorSidePic{
+				height: 130px;
+				width: 130px;
+			}

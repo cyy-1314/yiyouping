@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>pageThree</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/pageThree.css"/>
+	<link rel="stylesheet" type="text/css" href="css/supershop.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<script src="js/JQuery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src = "js/angular.min.js"></script>
+	<body ng-app="">
+		<div style="width:1200px;height:200px;margin: 0 auto;">
+			<div ng-include="'header_title.php'"></div>
+		</div>
+		<div class="wrap">
+			<ul></ul>
+			<ul></ul>
+			<ul></ul>
+			<ul></ul>
+			<ul></ul>
+		</div>
+		<div ng-include="'footer.html'"></div>
+		
+	</body>
+	<script type="text/javascript">
+		var wrap = document.querySelector(".wrap");
+		var uls = document.getElementsByTagName("ul");
+		var total = 100;
+		
+		//设置生成li,每次生成20个,在ul里面插进去
+		for(var i=1;i<19;i++){
+			 //调用产生的li的函数
+			 createLis(i);	 
+			 
+		}
+		function createLis(num){
+			var minIndex = minHeight();
+//			console.log(minIndex)
+			var tempLis = document.createElement("li");
+			var tempAs = document.createElement("a");
+			var tempimgs = document.createElement("img");
+			var tempDivs = document.createElement("div");
+			tempimgs.style.width="220px";
+			tempimgs.style.height="auto";
+			tempimgs.src="img/img3/"+num+".jpg";
+			uls[minIndex].appendChild(tempLis).appendChild(tempAs).appendChild(tempimgs);
+			uls[minIndex].appendChild(tempLis).appendChild(tempAs).appendChild(tempDivs);
+		}
+		function minHeight() {
+			var minIndex = 0; //设置最小的高度是
+			var minHeight = uls[0].offsetHeight;
+			for(var i = 1; i < uls.length; i++) {
+				if(uls[i].offsetHeight < minHeight) {
+					minIndex = i;
+				}
+			}
+			return minIndex;
+		}
+ 
+	</script>
+</html> 

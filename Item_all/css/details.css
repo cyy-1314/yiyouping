@@ -1,0 +1,161 @@
+.decontent {
+				width: 1200px;
+				padding-top: 15px;
+				margin: auto;
+			}
+			
+			.sopai {
+				width: 980px;
+				height: 36px;
+				margin: auto;
+				text-align: left;
+				border-bottom: 2px solid #E2E2E2;
+			}
+			
+			.allgoods {
+				width: 980px;
+				margin: auto;
+				position: relative;
+			}
+			
+			.solist {
+				margin-top: 20px;
+				width: 1024px;
+			}
+			
+			.shops .solist li {
+				width: 314px;
+				height: 461px;
+				margin: 0 8px 20px;
+				position: relative;
+				float: left;
+				border: 2px solid #FFFFFF;
+			}
+			
+			.goodimg {
+				height: 380px;
+				border: 1px solid #CCCCCC;
+				overflow: hidden;
+			}
+			
+			.goodtit {
+				width: 270px;
+				height: 30px;
+				float: left;
+				overflow: hidden;
+			}
+			
+			.em1 {
+				color: #fb3634;
+				float: left;
+				font: 30px/13px normal arial;
+				margin: 10px 0 5px;
+			}
+			
+			.em2 {
+				color: #999;
+				font: 13px/45px normal arial;
+				padding: 3px;
+				text-decoration: line-through;
+			}
+			
+			.goodimgss {
+				width: 314px;
+			    height: 79px;
+			    position: relative;
+			    background-image:url(../img/buybutton.png);
+			}
+			
+			.shops .solist li:hover .goodimgss {
+				background-image:url(../img/lijigo.png);
+			}
+			
+			.shops .solist li:hover .lijibuy {
+				display: none;
+			}
+			
+			.lijibuy {
+				position: relative;
+			}
+			
+			.lijibuy2,
+			.lijibuy3 {
+				background-color: white;
+			}
+			
+			.lijibuy span {
+				display: block;
+				text-align: center;
+				position: absolute;
+			}
+			
+			.lijibuy span:nth-child(1) {
+				top: 5px;
+				left: 110px;
+			}
+			
+			.lijibuy span:nth-child(2) {
+				top: 35px;
+				left: 102px;
+			}
+			
+			.lijibuy3 {
+				display: block;
+				text-align: center;
+				position: absolute;
+				top: 35px;
+				left: 102px;
+			}
+			
+			.solisttop {
+				background: #9815D4 none repeat scroll 0 0;
+				height: 2px;
+				left: -2px;
+				position: absolute;
+				top: -2px;
+				transition: all 0.5s ease-out 0s;
+				width: 2px;
+			}
+			
+			.solistbottom {
+				background: #9815D4 none repeat scroll 0 0;
+				bottom: -2px;
+				font-size: 0;
+				height: 2px;
+				position: absolute;
+				right: -2px;
+				transition: all 0.5s ease-out 0s;
+				width: 0;
+			}
+			
+			.solistleft {
+				background: #9815D4 none repeat scroll 0 0;
+				font-size: 0;
+				height: 0;
+				left: -2px;
+				position: absolute;
+				top: 0;
+				transition: all 0.5s ease-out 0s;
+				width: 2px;
+			}
+			
+			.solitright {
+				background: #9815D4 none repeat scroll 0 0;
+				bottom: 0;
+				font-size: 0;
+				height: 0;
+				position: absolute;
+				right: -2px;
+				transition: all 0.5s ease-out 0s;
+				width: 2px;
+			}
+			
+			.shops .solist li:hover .solisttop,
+			.shops .solist li:hover .solistbottom {
+				width: 316px;
+			}
+			
+			.shops .solist li:hover .solistleft,
+			.shops .solist li:hover .solitright {
+				height: 463px;
+			}

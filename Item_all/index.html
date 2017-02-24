@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Language" content="zh-CN">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>text</title>
+		<link rel="stylesheet" href="css/improts.css" />
+		<script src="js/JQuery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>	 
+		<script src="js/angular.min.js"></script>
+		<style type="text/css">
+			.banner {
+				position: relative;
+				width: 1200px;
+				height: 3000px;
+				margin: 0 auto;
+				/*background: #FF0000;*/
+				overflow: hidden;
+			}
+			.detB:hover{
+				border: 1px solid #F0B73E;
+			}
+		</style>
+	</head>
+
+	<body ng-app="c">
+
+		<div ng-include="'header_title.php'"  ></div>
+
+		<!--		中间的详情页面，做了一下商品推荐-->
+		<div class="banner" ng-controller="myc">
+			<div ng-include="'ht.html'"></div>
+			<div class="favorable">
+				<span id="">
+						<img src="img/titl_03.jpg"/>
+					</span>
+				<a href="#">更多</a>
+			</div>
+			<!--今天优惠里面的图片-->
+			<div class="favorableBox">
+				<div class="fBox" ng-repeat="x in cheap">
+					<div class="fBoxPic">
+						<p style="height: 20px;overflow: hidden;text-overflow: ellipsis;text-overflow: ellipsis;">
+							<a href="xiangqing.html?cheapId={{x.cheapId}}">{{x.productName}}</a>
+						</p>
+						<div>
+							<a href="xiangqing.html?cheapId={{x.cheapId}}">
+								<img class="fBpic" ng-src="{{x.productImg}}" />
+							</a>
+						</div>
+						<div style="margin-top: -10px;">
+							<div>
+								原价{{x.oriPrice}}元
+								</span>
+								<span class="fBnum">
+									{{x.saleNum}}
+								</span>
+								<span>
+									人已经购买
+								</span>
+							</div>
+						</div>
+						<div class="fBBot" style="margin: 0px -10px">
+							<dd class="fBBotFot1">
+								￥
+							</dd>
+							<dd class="fBBotFot2">
+								{{x.currentPrice}}
+							</dd>
+							<a class="fBBotBuy" style="display:block;float: right; margin: 5px 10px;" href="xiangqing.html?cheapId={{x.cheapId}}">购买</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--每个楼层-->
+			<div ng-repeat="x in floors" ng-init="p_index=$index">
+				<div class="oneFloor">
+					<div class="oneFloorTitle">
+						{{x.title}}
+					</div>
+					<div class="oneFloorRight">
+						<a href="#">iphone4s</a>
+						|
+						<a href="#">iphone5</a>
+					</div>
+
+				</div>
+				<!--每个楼层详情-->
+				<div class="oneFloorBox">
+					<div class="oneFloorDetail">
+						<div class="detailBox">
+							<div class="iphonesBox">
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-01.png" />
+									</a>
+								</div>
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-02.png" />
+									</a>
+								</div>
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-03.png" />
+									</a>
+								</div>
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-04.png" />
+									</a>
+								</div>
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-05.png" />
+									</a>
+								</div>
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-06.png" />
+									</a>
+								</div>
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-07.png" />
+									</a>
+								</div>
+								<div class="iphones">
+									<a href="#">
+										<img src="img/1f-08.png" />
+									</a>
+								</div>
+
+							</div>
+							<div class="iphonesPic">
+								<a href="#">
+									<img ng-src="{{x.floorBigPic}}" />
+								</a>
+							</div>
+						</div>
+						<div class="detailBottom">
+							<div class="detB" ng-repeat=" x in floorDetail[p_index]">
+								<a href="xiangqing.html?floorId={{x.floorId}}">
+									<img class="detBimg" ng-src="{{x.productImg}}" />
+								</a>
+
+								<div class="detBut">
+									<div class="detBDiv" style="height: 20px;overflow: hidden;text-overflow: ellipsis;text-overflow: ellipsis;">
+										<a href="">{{x.productName}}</a>
+									</div>
+									<div class="detBDiv">
+
+										<div>
+											￥{{x.currentPrice}}
+										</div>
+										<div>
+											原价:{{x.oriPrice}}
+										</div>
+									</div>
+									<div class="detBNum">
+										已售：{{x.saleNum}}
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="oneFloorSilder">
+						<div class="oneFSildTitle">
+							iphone手机壳单品排行榜
+						</div>
+						<div ng-include="'floorSider.html'"></div>
+
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		<div ng-include="'gundong.html'"></div>
+		<div ng-include="'footer.html'"></div>
+	
+	</body>
+
+</html>
+<script type="text/javascript">
+	var app = angular.module("c", []);
+	app.controller("myc", function($scope, $http) {
+		var iphoneBox = [];
+		var iphoneBox1 = [];
+		$http({method:"post",url:"php/index_server.php",params:{}}).success(function(data){
+				$scope.cheap = data[0];
+				$scope.floors = data[1];
+				$scope.floorDetail = data[2];
+				//单表里面的onef数据
+				$scope.oneftable = data[3];
+				 
+				iphoneBox.push(data[3][0]);
+				iphoneBox.push(data[3][1]);
+				iphoneBox.push(data[3][2]);
+				$scope.iphoneBox = iphoneBox;
+		})
+	})
+</script>

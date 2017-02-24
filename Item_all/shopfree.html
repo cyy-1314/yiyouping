@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/supershop.css"/>
+		<script src="js/JQuery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+	</head>
+	<body ng-app="cyy" ng-controller="dd">
+		<!--导航栏-->
+		<div ng-include="'header_title.html'"></div>
+		<!--大图以及以下-->
+		<div class="tong_all">
+			<div style=" float:left;width:1200px; height:484px; overflow:hidden;">&nbsp;&nbsp;</div>
+		</div>
+		<div class="freetitle">
+			<h2><img src="img/alarm.png"/>超级0元购免费领取</h2>
+		</div>
+		<!--中间商品列表项-->
+		<div class="middle_content">
+			<!--第一个-->
+			<div class="pro3_1" ng-repeat="x in res">
+				<div class="pro3_1_1">
+					<a href="#" target="_blank">
+						<img src="{{x.productImg}}" width="240" height="240" border="0" alt="">
+					</a>
+				</div>
+				<div class="pro3_1_2">
+					<div class="pro3_1_2_1">
+						<a style="color: #7d7d7d;" href="xiangqing.html?cheapId={{x.freeId}}" class="link000" target="_blank" title="">{{x.productName}}</a>
+					</div>
+					<div class="pro3_1_2_2">
+						<div class="pro3_1_2_2_1">
+							0元免费领<br />
+							<span>￥{{x.oriPrice}}</span>
+						</div>
+						<div class="pro3_1_2_2_2">
+							会员价<br />
+							<span>￥{{x.currentPrice}}</span>
+						</div>
+					</div>
+					<div class="pro3_1_2_3">
+						<a href="#">
+							<img style="width: 130px;height: 42px;border: 0;vertical-align: middle;" src="img/pro7.gif"/>&nbsp;&nbsp;
+							<span>{{x.saleNum}}</span>人已抢购,可继续购买...
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div ng-include="'footer.html'"></div>
+
+	</body>
+	
+	<script>
+		var app = angular.module("cyy",[]);
+		app.controller("dd",function ($scope,$http) {
+			$http.get("php/freego.php").success(function (res) {
+				$scope.res=res;
+				console.log($scope.res);
+				
+			})
+		})
+	</script>
+
+</html>
